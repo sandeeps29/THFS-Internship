@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Coin-flip-game</title>
+</head>
+
+<body>
+  <script>
+    const randomValue = Math.random();
+    let result = '';
+
+    /*if (randomValue < 0.5) {
+      console.log("Heads");
+      result = 'heads';
+
+    }
+
+    else {
+      console.log("Tails");
+      result = 'tails';
+    }*/
+
+    result = randomValue < 0.5 ? 'heads' :  'tails';
+    console.log(result);
+
+    guess = 'heads';
+    /*if (guess === result) {
+      console.log("you win");
+    }
+    else {
+      console.log("you lose");
+    }*/
+   const output = guess==result? 'you win': 'you lose';
+   console.log(output);
+
+  </script>
+</body>
+
+</html>
