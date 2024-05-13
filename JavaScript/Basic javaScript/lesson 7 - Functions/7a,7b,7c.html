@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      greet('john');
+      greet('alex');
+      greet('martin');
+      greet();
+     
+       /*function greet(name = 'hi there')
+       {
+        console.log(`Hello ${name}!`);
+       }*/
+       function greet(name)
+       {
+        if(!name){
+          console.log("hi there");
+        }
+        else{
+          console.log(`Hello ${name}!`);
+        }
+       
+       }
+  </script>
+</body>
+</html>
