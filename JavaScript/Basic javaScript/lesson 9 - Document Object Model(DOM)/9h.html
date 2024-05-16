@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <input class="js-key-up" onkeyup="keyUp()">
+  <p class="js-p1-element"></p>
+  <script>
+    function keyUp() {
+      document.querySelector('.js-p1-element').innerHTML = document.querySelector('.js-key-up').value
+    }
+
+  </script>
+</body>
+
+</html>
