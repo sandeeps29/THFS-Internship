@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>amazon shipping cal</title>
+  <link rel="stylesheet" href="10h.css">
+</head>
+
+<body>
+
+  <p> Amazon Shipping Calculator</p>
+  <p> Orders under $40 = +$10 shipping.</p>
+  <p> Orders over $40 = FREE shipping.</p>
+
+  <input placeholder="Cost of order" class="js-input  input-field" onkeydown="keyDown(event)">
+  <button class="calculate-button" onclick="calculateTotal();" class="js-calculate">Calculate</button>
+
+  <p class="js-error-message error-message"></p>
+
+  <p class="js-total-cost"></p>
+
+
+  <script src="10h.js">
+  </script>
+
+
+</body>
+
+</html>
