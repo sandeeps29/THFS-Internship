@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let num = []
+    for (i = 1; i <= 20; i++) {
+      num.push(i);
+    }
+
+    for (i = 0; i < num.length; i++) {
+
+      if (num[i] % 3 === 0 && num[i] % 5 === 0) {
+        num[i] = 'FizzBuzz';
+      }
+      if (num[i] % 3 === 0) {
+        num[i] = 'Fizz';
+      }
+      if (num[i] % 5 === 0) {
+        num[i] = 'Buzz';
+      }
+
+    }
+    console.log(num);
+
+    function findIndex(array, word) {
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === word) {
+          return i;
+        }
+      }
+
+      return -1;
+    }
+
+    function unique(array) {
+      const result = [];
+      for (i = 0; i < array.length; i++) {
+        word = array[i]
+
+        if (findIndex(result, word) === -1) {
+          result.push(word);
+        }
+
+      }
+
+      return result;
+    }
+
+    console.log(unique(['green', 'red', 'blue', 'red']));
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let array = ['hello', 'world', 'search', 'good', 'search']
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] === 'search') {
+        console.log(i);
+        break;
+      }
+    }
+
+    let word = ['not', 'found']
+    let index = -1
+    for (let i = 0; i < word.length; i++) {
+      if (word[i] === 'search') {
+        index = i;
+      }
+    }
+    console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'));
+    console.log(findIndex(['green', 'red', 'blue', 'red'], 'yellow'));
+
+    function findIndex(array, word) {
+      let index = 0;
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === word) {
+          return i;
+        }
+      }
+      return -1;
+    }
+
+    function removeEgg(foods) {
+      let newFood = []
+      let count = 0;
+      const copyFoods = foods.slice()
+      const reverseFoods = copyFoods.reverse();
+      //console.log(reverseFoods);
+      for (let i = 0; i < reverseFoods.length; i++) {
+        if (reverseFoods[i] === 'egg') {
+          count++;
+        }
+        if (count <= 2 && reverseFoods[i] === 'egg') {
+          continue;
+        }
+        newFood.push(reverseFoods[i]);
+      }
+      console.log(foods);
+      return newFood.reverse();
+    }
+
+    const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+    console.log(removeEgg(foods));
+    console.log(foods);
+
+  </script>
+</body>
+
+</html>
