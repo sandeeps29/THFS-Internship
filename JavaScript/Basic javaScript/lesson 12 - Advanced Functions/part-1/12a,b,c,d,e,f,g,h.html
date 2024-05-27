@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <button class="js-finish-button">Finish</button>
+  <button class="js-add-to-cart-button">Add to cart</button>
+  <br>
+  <p></p>
+  <button class="js-add-button">Add</button>
+  <button class="js-remove-button">Remove</button>
+
+  <p class="js-display-message"></p>
+  <script>
+    const add = function () {
+      console.log(2 + 3);
+    }
+    add();
+    add();
+
+    function runTwice(fun) {
+      fun();
+      fun();
+    }
+
+    runTwice(add);
+
+    runTwice(function () {
+      console.log('12b');
+    });
+
+    document.querySelector('.js-finish-button').addEventListener('click', () => {
+      immediateChange();
+      setTimeout(() => { changeFinish() }, 1000);
+    });
+
+    function changeFinish() {
+      document.querySelector('.js-finish-button').innerHTML = 'Finished!';
+    }
+    function immediateChange() {
+      document.querySelector('.js-finish-button').innerHTML = 'Loading...';
+    }
+    let timeoutId;
+    document.querySelector('.js-add-to-cart-button').addEventListener('click', () => {
+      //clearTimeout(timeoutId);
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      displayMessage();
+      timeoutId = setTimeout(() => { document.querySelector('.js-display-message').innerHTML = '' }, 2000);
+    });
+
+    function displayMessage() {
+      document.querySelector('.js-display-message').innerHTML = 'Added';
+    }
+
+    let messages = 2;
+    let isNotificationDisplay;
+    let intervalId1;
+    notificationDisplay();
+    document.querySelector('.js-add-button').addEventListener('click', () => {
+      messages++;
+      if (messages > 0) {
+        notificationDisplay();
+      }
+    });
+    document.querySelector('.js-remove-button').addEventListener('click', () => {
+      messages--;
+      if (messages === 0) {
+        stopNotificationDisplay();
+      }
+    });
+
+    function notificationDisplay() {
+      if (isNotificationDisplay) {
+
+        console.log(isNotificationDisplay);
+        return;
+      }
+
+      isNotificationDisplay = true;
+
+      intervalId1 = setInterval(() => {
+        if (document.title === 'App') {
+          console.log(document.title = `(${messages})messages`);;
+        }
+        else {
+          console.log(document.title = 'App');
+        }
+
+      }, 2000);
+    }
+
+    function stopNotificationDisplay() {
+      isNotificationDisplay = false;
+
+      clearInterval(intervalId1);
+      document.title = "App";
+    }
+  </script>
+</body>
+
+</html>
