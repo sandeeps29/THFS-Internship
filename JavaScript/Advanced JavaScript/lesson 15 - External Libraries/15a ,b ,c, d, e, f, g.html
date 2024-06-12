@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>lesson 15</title>
+</head>
+<body>
+  <script type="module">
+      import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+
+      import isSatSun from './15g.js';
+
+      const today = dayjs();
+      const date = today.add(5, 'days');
+      console.log(date.format("MMMM D"));
+      const date2 = today.add(1, "month");
+      console.log(date2.format("MMMM D"));
+      const date3 = today.subtract(1, 'month');
+      console.log(date3.format("MMMM  D"));
+      console.log(date3.format("dddd"));
+
+    
+      console.log(isSatSun(date3));
+  </script>
+</body>
+</html>
