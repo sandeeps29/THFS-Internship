@@ -26,7 +26,7 @@ products.forEach((product) => {
   </div>
 
   <div class="product-quantity-container">
-    <select>
+    <select class="js-quantity-selector-${product.id}">
       <option selected value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -44,14 +44,15 @@ products.forEach((product) => {
 
   <div class="product-spacer"></div>
 
-  <div class="added-to-cart">
+  <div class="added-to-cart js-added-to-cart-${product.id}">
     <img src="images/icons/checkmark.png">
     Added
   </div>
 
   <button data-product-id="${
     product.id
-  }" class="add-to-cart-button js-add-to-cart-button button-primary">
+  }" class="add-to-cart-button js-add-to-cart-button
+  button-primary">
     Add to Cart
   </button>
 </div>`;
@@ -66,11 +67,35 @@ function updateCartQuantity() {
 
 updateCartQuantity();
 
+const addedMessageTimeouts = {};
+
 document.querySelectorAll(".js-add-to-cart-button").forEach((button) => {
   button.addEventListener("click", () => {
     const productId = button.dataset.productId;
 
-    addToCart(productId);
+    const querySelector = document.querySelector(
+      `.js-quantity-selector-${productId}`
+    );
+
+    let quantity = Number(querySelector.value);
+
+    addToCart(productId, quantity);
     updateCartQuantity();
+
+    const viewAdded = document.querySelector(`.js-added-to-cart-${productId}`);
+
+    viewAdded.classList.add("view-added-to-cart");
+
+    const previousTimeoutId = addedMessageTimeouts[productId];
+
+    if (previousTimeoutId) {
+      clearTimeout(previousTimeoutId);
+    }
+
+    let viewId = setTimeout(() => {
+      viewAdded.classList.remove("view-added-to-cart");
+    }, 2000);
+
+    addedMessageTimeouts[productId] = viewId;
   });
 });
