@@ -22,8 +22,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
-  width: 100%; 
+  height: 100vh;
+  width: 100%;
   max-width: 500px;
   border: 1px solid mediumblue;
   margin: auto;
@@ -93,11 +93,11 @@ ul li::before {
   margin-right: 0.5rem;
 }
 
-.item input[type="checkbox"]:focus + label {
+.item input[type="checkbox"]:focus+label {
   text-decoration: underline;
 }
 
-.item > label {
+.item>label {
   font-size: 0.75rem;
   flex-grow: 1;
 }
@@ -111,7 +111,7 @@ ul li::before {
   cursor: pointer;
 }
 
-.item svg:focus, 
+.item svg:focus,
 .item svg:hover {
   color: red;
   outline: none;
