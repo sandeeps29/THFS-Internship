@@ -1,0 +1,49 @@
+.partner-section {
+  text-align: center;
+  padding: 50px;
+  background:#f9f9f9;;
+}
+
+.partner-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.partner-section p {
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.filter-buttons {
+  margin-bottom: 30px;
+}
+
+.filter-buttons button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.filter-buttons button.active {
+  background-color: #0000ff;
+  color: #fff;
+}
+
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.partner-logo {
+  margin: 10px;
+}
+
+.partner-logo img {
+  height: 50px;
+  object-fit: contain;
+}

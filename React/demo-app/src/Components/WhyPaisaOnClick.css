@@ -1,0 +1,48 @@
+/* WhyPaisaOnClick.css */
+.why-paisaonclick-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.why-paisaonclick-section h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.why-paisaonclick-section h2 span {
+  color: #0066cc; 
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.feature-card img {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 0;
+}

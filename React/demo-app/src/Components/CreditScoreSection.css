@@ -1,0 +1,68 @@
+.credit-score-section {
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 100px auto;
+  margin-bottom: 20px;
+  max-width: 1120px;
+  text-align: center;
+}
+
+.credit-score-header h2 {
+  font-size: 28px;
+  color: black;
+  text-align: left;
+}
+
+.credit-score-header span {
+  color: #4d56a6;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.credit-score-header p {
+  color: #666;
+  font-size: 16px;
+  text-align: left;
+}
+
+.credit-score-stats {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+
+.stat {
+  text-align: left;
+}
+
+.stat strong {
+  font-size: 24px;
+  color: black;
+  margin-left: 10px;
+}
+
+.stat p {
+  color: #666;
+  font-size: 14px;
+  margin-right: 1px;
+  margin-left: 10px;
+
+}
+
+.check-now-btn {
+  background-color: #4d56a6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin-top: 20px;
+}
+
+.check-now-btn:hover {
+  background-color: #3b4399;
+}

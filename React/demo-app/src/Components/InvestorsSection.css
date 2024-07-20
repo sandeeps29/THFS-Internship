@@ -1,0 +1,31 @@
+.investors-section {
+  text-align: center;
+  margin: 0;
+  padding: 30px 0;
+  background-color: #f9f9f9;
+}
+
+.investors-section h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.investor-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.investor-logo1, .investor-logo2 {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.investor-logo1 img, .investor-logo2 img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 25px;
+}

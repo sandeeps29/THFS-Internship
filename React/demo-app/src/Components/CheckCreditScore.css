@@ -1,0 +1,41 @@
+
+.check-credit-score-section {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  margin: 20px 0;
+}
+
+.check-credit-score-content {
+  flex: 1;
+}
+
+.check-credit-score-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.check-credit-score-content p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.check-credit-now-btn {
+  background-color: white;
+  color: #1e3c72;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.check-credit-now-btn:hover {
+  background-color: #1e3c72;
+  color: white;
+}

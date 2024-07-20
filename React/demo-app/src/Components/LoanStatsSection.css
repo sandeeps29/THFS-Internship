@@ -1,0 +1,47 @@
+/* LoanStatsSection.css */
+.loan-stats-section {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9); /* Adjust the gradient colors to match your theme */
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+.loan-stats-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.loan-stats-section p {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 150px; /* Adjust the width to your preference */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card img {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.stat-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.stat-card p {
+  font-size: 14px;
+}
